@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/nav.css">
+  <link rel="stylesheet" href="./style/footer.css">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      width: 100%;
+      height: auto;
+      background: #f7f7f7;
+      color: #333;
+    }
+    .main {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 80px 20px 40px;
+      border-radius: 10px;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 300;
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #444;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .service {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+      gap: 30px;
+      padding: 20px 0;
+      justify-items: center; 
+      align-items: center;
+    }
+    .img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  /* Center content vertically */
+      align-items: center;      /* Center content horizontally */
+      gap: 10px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .img img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .img h4 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #444;
+      margin-top: 10px;
+      padding: 0 10px;
+      text-align: center;
+      transition: color 0.3s ease;
+    }
+    .img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .img:hover img {
+      transform: scale(1.1);
+    }
+    .img:hover h4 {
+      color: #ff7043;
+    }
+    .nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .nav img {
+      width: 150px;
+    }
+    .nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav ul a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav ul a:hover {
+      color: #ff7043;
+    }
+    .nav i {
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav i {
+        display: block;
+      }
+      .nav ul {
+        display: none;
+      }
+      .main {
+        padding: 60px 20px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .service {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <img class="logo" src="./images/log.png" alt="logo">
+    <ul>
+      <a href="index.html"><li>HOME</li></a>
+      <a href="services.html"><li>SERVICES</li></a>
+      <a href="products.html"><li>PET PRODUCTS</li></a>
+      <a href="reviews.html"><li>REVIEWS</li></a>
+      <a href="adoption.html"><li>ADOPTION</li></a>
+    </ul>
+    <i id="menu" class="ri-menu-line lo"></i>
+  </nav>
+  <section class="main">
+    <h3>Because We Really Care About Your Pets</h3>
+    <h1>More Services Offers</h1>
+    <div class="service">
+      <div class="img">
+        <img src="./images/dog1.webp" alt="dog">
+        <h4>Bathing & Brushing</h4>
+      </div>
+      <div class="img">
+        <img src="./images/dog2.avif" alt="dog">
+        <h4>Hairstyling</h4>
+      </div>
+      <div class="img">
+        <img src="./images/dog3.jpeg" alt="dog">
+        <h4>Trimming</h4>
+      </div>
+    </div>
+    <div class="service">
+      <div class="img">
+        <img src="./images/day care.jpeg" alt="dog">
+        <h4>Day Care</h4>
+      </div>
+      <div class="img">
+        <img src="./images/vac.jpg.webp" alt="dog">
+        <h4>Vaccination</h4>
+      </div>
+      <div class="img">
+        <img src="./images/walkerr.jpeg" alt="dog">
+        <h4>Walking</h4>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-25%20232719-phRego8jTl9ZUdXutEKs411QoCBJen.png" alt="Petenica logo">
+                <h2>Petenica</h2>
+            </div>
+            <p class="footer-description">
+                This prodigiously grew tortoise charact stupidly pernicious jeepers along while accordingly under useful much salacious walking fars before some supp aesthetically wow shuddered.
+            </p>
+            <div class="social-links">
+              <a href="#" id="twitter-icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+              <a href="#" id="facebook-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" id="google-icon" aria-label="Google Plus"><i class="ri-google-fill"></i></a>
+              <a href="#" id="youtube-icon" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+              <a href="#" id="pinterest-icon" aria-label="Pinterest"><i class="ri-pinterest-fill"></i></a>
+          </div>
+          
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Latest Post</h3>
+            <div class="blog-posts">
+                <div class="post">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-25%20232719-phRego8jTl9ZUdXutEKs411QoCBJen.png" alt="Cat blog post">
+                    <div class="post-content">
+                        <h3>Acute Yellow Re-Laid Less Or Affirmatively Cats</h3>
+                        <span class="post-date">March 14, 2018</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-25%20232719-phRego8jTl9ZUdXutEKs411QoCBJen.png" alt="Cat blog post">
+                    <div class="post-content">
+                        <h3>Acute Yellow Re-Laid Less Or Affirmatively Cats</h3>
+                        <span class="post-date">March 14, 2018</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <div class="footer-section">
+            <h3 class="footer-title">Contact Info</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="ri-map-pin-line"></i>
+                    <span>BellSouth, Harley Street Florida 33968</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ri-phone-line"></i>
+                    <span>+91 9878654079</span>
+                </div>
+                <div class="contact-item">
+                    <i class="ri-mail-line"></i>
+                    <span>example@exmaple.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="copyright">
+        Copyrights 2020 PETENICA • All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

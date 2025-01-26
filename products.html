@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/nav.css">
+  <link rel="stylesheet" href="./style/footer.css">
+  <title>Products</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 800px;
+    }
+    .main{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+    }
+    .main .hero{
+      width: 100%;
+      height: 70vh;
+      background: url(./images/bg_pro.png) center center no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+    }
+
+    .main .hero .pera{
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .main .hero .pera p{
+      font-size: 22px;
+      color: gray;
+      
+    }
+
+    .main .hero .pera button{
+      padding: 10px 30px;
+      border-radius: 12px;
+      border: none;
+      background: rgb(242, 207, 246);
+      &:hover{
+      background: rgb(239, 180, 246);
+      }
+    }
+    .recent{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .produc{
+      display: flex;
+      align-items: center;
+      height: 600px;
+      width: 100%;
+      justify-content: center;
+      justify-content: space-evenly;
+      
+    }
+    .produc .cart{
+      height: 500px;
+      width: 300px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 20px;
+      align-items: center;
+      border-radius: 8px;
+      &:hover{
+        box-shadow: 0 0 31px 3px gray;
+      }
+    }
+    .produc .cart img{
+      width: 100%;
+      height: 70%;
+      border-radius: inherit;
+    }
+
+    .produc .cart p{
+      font-size: 22px;
+    }
+    .produc .cart .add{
+      padding: 10px 40px;
+      background: red;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .reviews-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .review-card {
+      width: 300px;
+      height: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .review-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .review-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .review-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .rating i {
+      color: #f39c12; /* Star color */
+      font-size: 18px;
+    }
+
+    .rating i.empty {
+      color: #dcdcdc;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <img class="logo" src="./images/log.png" alt="logo">
+    <ul>
+      <a href="index.html"><li>HOME</li></a>
+      <a href="services.html"><li>SERVICES</li></a>
+      <a href="products.html"><li>PET PRODUCTS</li></a>
+      <a href="reviews.html"><li>REVIEWS</li></a>
+      <a href="adoption.html"><li>ADOPTION</li></a>
+    </ul>
+    <i id="menu" class="ri-menu-line lo"></i>
+  </nav>
+  <section class="main">
+    <div class="hero">
+      <div class="pera">
+        <h2>Vitamins and Supplements</h2>
+        <p>Lowest Prices</p>
+        <p>Fortified with Glucosamine, Chondroitin and MSM to help support the structural integrity of joints and connective tissues</p>
+        <button>View Details</button>
+      </div>
+      <div class="prod">
+        <img src="./images/cat_pro.png" alt="">
+      </div>
+    </div>
+    <div class="recent">
+      <h1>Recent Products</h1>
+      <div class="produc">
+        <div class="cart">
+          <img src="./images/newfood.jpeg" alt="">
+          <p>$45</p>
+          <button class="add">Add to Cart</button>
+          </div>
+          <div class="cart">
+            <img src="./images/petpr2.webp" alt="">
+          <p>$25</p>
+          <button class="add">Add to Cart</button>
+            </div>
+            <div class="cart">
+              <img src="./images/petshampoo.jpeg" alt="">
+          <p>$12.75</p>
+          <button class="add">Add to Cart</button>
+              </div>
+              <div class="cart">
+                <img src="./images/petleash.webp" alt="">
+          <p>$19.99</p>
+          <button class="add">Add to Cart</button>
+                </div>
+        </div>
+      </div>
+      <h2>Customers Reviews</h2>
+      <div class="reviews-section">
+        <div class="review-card">
+          <img src="./images/user.jpg" alt="User Image">
+          <h3>John Doe</h3>
+          <p>"Amazing product! It helped my pet a lot and the quality is top-notch. Highly recommend it!"</p>
+          <div class="rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill empty"></i>
+          </div>
+        </div>
+  
+        <div class="review-card">
+          <img src="./images/user.jpg" alt="User Image">
+          <h3>Jane Smith</h3>
+          <p>"Great value for money. My dog loved the food, and I noticed improvements in his coat after a week."</p>
+          <div class="rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+  
+        <div class="review-card">
+          <img src="./images/user.jpg" alt="User Image">
+          <h3>Mark Taylor</h3>
+          <p>"Good product, but delivery was delayed. Still, my pet seems to enjoy it, so I'll give it 4 stars."</p>
+          <div class="rating">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill empty"></i>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-25%20232719-phRego8jTl9ZUdXutEKs411QoCBJen.png" alt="Petenica logo">
+                    <h2>Petenica</h2>
+                </div>
+                <p class="footer-description">
+                    This prodigiously grew tortoise charact stupidly pernicious jeepers along while accordingly under useful much salacious walking fars before some supp aesthetically wow shuddered.
+                </p>
+                <div class="social-links">
+                  <a href="#" id="twitter-icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+                  <a href="#" id="facebook-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                  <a href="#" id="google-icon" aria-label="Google Plus"><i class="ri-google-fill"></i></a>
+                  <a href="#" id="youtube-icon" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                  <a href="#" id="pinterest-icon" aria-label="Pinterest"><i class="ri-pinterest-fill"></i></a>
+              </div>
+              
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Latest Post</h3>
+                <div class="blog-posts">
+                    <div class="post">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-25%20232719-phRego8jTl9ZUdXutEKs411QoCBJen.png" alt="Cat blog post">
+                        <div class="post-content">
+                            <h3>Acute Yellow Re-Laid Less Or Affirmatively Cats</h3>
+                            <span class="post-date">March 14, 2018</span>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-25%20232719-phRego8jTl9ZUdXutEKs411QoCBJen.png" alt="Cat blog post">
+                        <div class="post-content">
+                            <h3>Acute Yellow Re-Laid Less Or Affirmatively Cats</h3>
+                            <span class="post-date">March 14, 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>BellSouth, Harley Street Florida 33968</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ri-phone-line"></i>
+                        <span>+91 9878654079</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ri-mail-line"></i>
+                        <span>example@exmaple.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="copyright">
+            Copyrights 2020 PETENICA • All Rights Reserved.
+        </div>
+      </footer>
+  </section>
+
+</body>
+</html>
